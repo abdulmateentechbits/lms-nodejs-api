@@ -1,5 +1,4 @@
 import express from 'express';
-import { subCategories } from '../utils/courses.js';
 
 const router = express.Router();
 export const doLogin = async (req, res) => {
@@ -29,23 +28,10 @@ export const doLogin = async (req, res) => {
     }
 }
 
-export const getCourses = async (req, res) => {
-    res.status(200).json({data:subCategories, message:'Success'});
+export const getProducts = async (req, res) => {
+    res.status(200).json({data:"Pructs", message:'Success'});
 }
 
-export const deleteCourse = async (req, res) => {
-    res.status(200).json("deleteCourse");
-}
-export const updateCourse = async (req, res) => {
-    res.status(200).json("updateCourse");
-}
-export const getCourse = async (req, res) => {
-    res.status(200).json("getCourse");
-}
-
-export const doLogout = async (req, res) => {
-    res.status(200).json("doLogout");
-}
 
 
 export default router;
